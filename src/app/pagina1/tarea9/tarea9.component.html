@@ -1,0 +1,25 @@
+<p>tarea9 works!</p>
+<form class="p-5 w-25">
+    <p class="form-group">
+        <label for="num1">ingrese primer valor</label>
+        <input type="number" class="form-control" name="num1" id="num1" [(ngModel)]="numero1">
+    </p>
+    <p class="form-group">
+        <label for="num2">ingrese segundo valor</label>
+        <input type="number" class="form-control" name="num2" id="num2" [(ngModel)]="numero2">
+    </p>
+    <select name="miselect" [(ngModel)]="seleccionado" class="form-select">
+        <option [value]="item" *ngFor="let item of lista">{{item}}</option>
+    </select>
+    <div class="m-3">resultado:
+        <container-element [ngSwitch]="seleccionado">
+            <span *ngSwitchCase="lista[0]" [ngStyle]="{'color': 'blue'}">{{numero1 + numero2}} </span>
+            <span *ngSwitchCase="lista[1]" [ngStyle]="{'color': 'blue'}">{{numero1 - numero2}}</span>
+            <span *ngSwitchCase="lista[2]" [ngStyle]="{'color': 'blue'}">{{numero1 * numero2}}</span>
+            <span *ngSwitchCase="lista[3]" [ngStyle]="{'color': 'blue'}">{{numero1 / numero2}}</span>
+            <span *ngSwitchDefault [ngStyle]="{'color': 'red'}">
+                (no eligio ninguna opcion)
+            </span>
+         </container-element>
+    </div>
+</form>

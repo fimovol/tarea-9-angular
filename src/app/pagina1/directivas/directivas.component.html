@@ -1,0 +1,29 @@
+<p>directivas works!</p>
+<input type="button" value="Mostrar/Oculatar" (click)="mostrar=!mostrar">
+<input type="button" value={{valor}} (click)="Generar()">
+<p *ngIf="mostrar">{{mensaje}} </p>
+
+<form>
+    <input type="text" name="nom" [(ngModel)]="nombre">
+    <p>{{nombre | uppercase}} </p>
+    <input type="text" name="ap" [(ngModel)]="apellidos">
+    <p>{{apellidos | uppercase}} </p>
+    <p>{{nombre | uppercase}} {{apellidos | uppercase}} </p>
+</form>
+<H3>JEJE</H3>
+<form >
+    <input type="number" name="num1" [(ngModel)]="numero1">
+    <input type="number" name="num2" [(ngModel)]="numero2">
+    <p>
+        suamar:
+        <strong>{{numero1}}+ </strong>
+        <strong>{{numero2}}= </strong>
+        <strong>{{numero1 + numero2}} </strong>
+    </p>
+    <p>
+        multiplicar:
+        <strong>{{numero1}}* </strong>
+        <strong>{{numero2}}= </strong>
+        <strong>{{numero1 * numero2}} </strong>
+    </p>
+</form>

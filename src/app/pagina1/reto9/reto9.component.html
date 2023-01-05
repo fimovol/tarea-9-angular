@@ -1,0 +1,15 @@
+<p>reto9 works!</p>
+<form class="m-5">
+    <span>
+        <input type="checkbox" name="checkbox" id="" [(ngModel)]="checkbox">
+        esta activo
+    </span>
+    
+    <div *ngIf="checkbox; else falso" class="w-25 bg-primary">
+        <img src="../../../assets/imagen.png" alt="" class="w-100">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolores rem alias expedita dolor quisquam voluptatum modi quaerat praesentium explicabo, mollitia totam ut obcaecati esse quae ipsam, nam consequatur nisi.</p>
+    </div>
+    <ng-template #falso>
+        <p>activa el checkbox para mostrar el contenido</p>
+    </ng-template>
+</form>

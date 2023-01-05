@@ -1,0 +1,22 @@
+<p>tarea8 works!</p>
+<form class="p-5 w-25">
+    <p class="form-group">
+        <label for="nombre" class="h3">nombre</label>
+        <input class="form-control" id="nombre" type="text" name="nombre" [(ngModel)]="nombre">
+    </p>
+    <p class="form-group">
+        <label for="apellido" class="h3">apellido</label>
+        <input class="form-control" type="text" name="apellido" [(ngModel)]="apellido">
+    </p>
+    <p class="form-group">
+        <label for="edad" class="h3">edad</label>
+        <input class="form-control" type="number" name="edad" [(ngModel)]="edad">
+    </p>
+    <p *ngIf="edad >= 18" class="h4">
+        es MAYOR de edad 
+    </p>
+    <p *ngIf="edad < 18" class="h4">
+        es MENOR de edad 
+    </p>
+    <P class="h4">nombre:{{nombre}} apellido:{{apellido}} edad:{{edad}} </P>
+</form>
